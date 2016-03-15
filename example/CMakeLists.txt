@@ -109,6 +109,8 @@ if ( BUILD_SSL )
 
     add_executable( https_client_verify_peer https_client/source/verify_peer.cpp )
     target_link_libraries( https_client_verify_peer ${CMAKE_PROJECT_NAME} )
+    add_executable( https_client_auth https_client/source/client_auth.cpp )
+    target_link_libraries( https_client_auth ${CMAKE_PROJECT_NAME} )
 endif ( )
 
 #
