@@ -88,7 +88,7 @@ namespace restbed
             auto data = String::format( "%s %s %s/%.1f\r\n",
                                         request->get_method( ).data( ),
                                         path.data( ),
-                                        request->get_protocol( ).data( ),
+                                        (request->get_protocol( ) == "HTTPS" ? "HTTP" : request->get_protocol( )).data( ),
                                         request->get_version( ) );
                                         
             auto headers = request->get_headers( );
