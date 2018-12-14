@@ -3,7 +3,6 @@
 project( "restbed" )
 
 cmake_minimum_required( VERSION 2.8.10 )
-
 #
 # Build Options
 #
@@ -39,6 +38,7 @@ include( "${CMAKE_SOURCE_DIR}/cmake/build_manifest.cmake" )
 
 include_directories( ${INCLUDE_DIR} )
 
+set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${VERSION} SOVERSION ${VERSION})
 add_library( ${PROJECT_NAME} ${BUILD_MANIFEST} )
 
 if ( BUILD_SSL )
