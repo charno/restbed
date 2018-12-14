@@ -25,11 +25,11 @@ message( "   ${Blue}Copyright 2013-2016, Corvusoft Ltd, All Rights Reserved.${Re
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules" )
 
 find_package( asio REQUIRED )
-include_directories( SYSTEM ${asio_INCLUDE} )
+include_directories( ${asio_INCLUDE} )
 
 if ( BUILD_SSL )
     find_package( openssl REQUIRED )
-    include_directories( SYSTEM ${ssl_INCLUDE} )
+    include_directories( ${ssl_INCLUDE} )
 endif ( )
 
 #
